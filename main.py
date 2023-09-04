@@ -38,7 +38,7 @@ if get_settings().analytics_api_key is not None:
 def youtube_gif_thumbnail(
     video_id: str,
     width: int = 320,
-    height: int = 320,
+    height: int = 180,
     duration: int = Query(
         500, description="Durasi GIF (milisecond)"
     ),
@@ -76,7 +76,7 @@ def youtube_gif_thumbnail(
 def youtube_thumbnail(
     video_id: str,
     width: int = 320,
-    height: int = 320,
+    height: int = 180,
     filetype: util.Supported_Filetype = "jpeg",
 ) -> Response:
     base_url = f"https://img.youtube.com/vi/{video_id}"
